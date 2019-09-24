@@ -72,8 +72,8 @@ namespace GreetingCard
             Font Font2 = new Font("Zurich UBlkEx BT", 18);
             SolidBrush Whitebrush = new SolidBrush(Color.White);
             SolidBrush Blackbrush = new SolidBrush(Color.Black);
-            Pen EggPen = new Pen(Color.White, 20);
-            Pen Egg2Pen = new Pen(Color.Black, 20);
+            Pen WhitePen = new Pen(Color.White, 20);
+            Pen BlackPen = new Pen(Color.Black, 20);
             SolidBrush Pinkbrush = new SolidBrush(Color.Pink);
             SolidBrush lightbluebrush = new SolidBrush(Color.LightBlue);
             SolidBrush yellowbrush = new SolidBrush(Color.Yellow);
@@ -88,9 +88,9 @@ namespace GreetingCard
 
             //EggBasket  
             g.FillPie(Blackbrush, 15, 220, 220, 200, 0, 180);
-            g.DrawEllipse(Egg2Pen, 25, 260, 200, 100);
+            g.DrawEllipse(BlackPen, 25, 260, 200, 100);
             g.FillEllipse(Blackbrush, 25, 260, 200, 100);
-            g.DrawArc(Egg2Pen, 25, 200, 200, 200, 180, 180);
+            g.DrawArc(BlackPen, 25, 200, 200, 200, 180, 180);
 
             Thread.Sleep(1000);
             g.Clear(Color.FromArgb(157, 207, 182));
@@ -102,19 +102,17 @@ namespace GreetingCard
             EggSound.Play();
 
             g.FillPie(Blackbrush, 15, 220, 220, 200, 0, 180);
-            g.DrawEllipse(Egg2Pen, 25, 260, 200, 100);
+            g.DrawEllipse(BlackPen, 25, 260, 200, 100);
             g.FillEllipse(Blackbrush, 25, 260, 200, 100);
-            g.DrawArc(Egg2Pen, 25, 200, 200, 200, 180, 180);
+            g.DrawArc(BlackPen, 25, 200, 200, 200, 180, 180);
 
 
             Thread.Sleep(2000);
 
-            //Greeting Text
+            //Final Text
             g.DrawString("May Your Easter Basket Be Full Of ", Font1, Whitebrush, 40, 40);
-
             Thread.Sleep(1000);
-
-            g.DrawString("Joy, Happiness,Peace,And Easter Eggs", Font2, Whitebrush, 5, 90);
+           g.DrawString("Joy, Happiness,Peace,And Easter Eggs", Font2, Whitebrush, 5, 90);
         }
     }
 }
